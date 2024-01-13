@@ -1,0 +1,49 @@
+@import "./Styles/mixins.scss";
+
+// Define some variables for colors and sizes
+$primary-color: #333;
+$secondary-color: #fff;
+$gutter-size: 10px;
+
+// Style the photo gallery container
+.photo-gallery {
+  margin: 50px auto;
+  margin-top: 10vh;
+  width: 65%;
+  background-color: $secondary-color;
+  padding: $gutter-size;
+
+  h1 {
+    @include h1_span;
+    margin-bottom: 5vh;
+  }
+
+  // Style the images inside the masonry layout
+  img {
+    margin: 10px;
+    box-shadow: 0 0 5px $primary-color;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    span {
+      line-height: 3.3rem !important;
+      font-size: 3rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  h1 {
+    span {
+      line-height: 4.3rem !important;
+      font-size: 4rem !important;
+    }
+  }
+}

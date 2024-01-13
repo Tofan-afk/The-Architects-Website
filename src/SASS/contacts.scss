@@ -1,0 +1,99 @@
+@import "./Styles/mixins.scss";
+.data {
+  margin: 0 auto;
+  margin-top: 10vh;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h1 {
+      @include h1_span;
+      &:nth-child(n + 2) {
+        @include h1_span_inverted;
+        font-size: 2.3rem !important;
+        span {
+          width: max-content;
+          max-width: 100%;
+          line-height: 2.6rem;
+        }
+      }
+    }
+  }
+  .maps {
+    min-width: 600px;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    img {
+      width: 35vw;
+      min-width: 600px;
+      height: 35vh;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .info {
+    width: 100%;
+    * {
+      font-size: 2.5rem !important;
+      line-height: 3rem !important;
+    }
+  }
+
+  .maps {
+    min-width: auto;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .data {
+  }
+  .info {
+    width: 80% !important;
+    * {
+      font-size: 3rem !important;
+      line-height: 3.3rem !important;
+    }
+  }
+
+  .maps {
+    img {
+      width: 100%;
+      min-width: auto;
+      height: 50vh;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .data {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+  }
+  .info {
+    margin-bottom: 5vh;
+    height: 70vh;
+    * {
+      font-size: 2rem !important;
+      line-height: 2.3rem !important;
+    }
+  }
+
+  .maps {
+    img {
+      height: 40vh;
+    }
+  }
+}

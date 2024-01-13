@@ -1,0 +1,112 @@
+@import "./Styles/mixins.scss";
+
+.list {
+  margin: 0 auto;
+  margin-top: 10vh;
+  width: 80%;
+  overflow: hidden;
+
+  .switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 500px;
+    margin-bottom: 10vh;
+    div {
+      width: 35%;
+      button {
+        padding: 0;
+        margin-left: 20px;
+        @include base-font;
+        @include button;
+        height: 50px;
+        width: 50px;
+
+        .arrow {
+          scale: 0.4;
+          transition: scale 0.3s ease-in-out;
+          &:hover {
+            scale: 0.55;
+          }
+        }
+      }
+    }
+
+    div {
+      h2 {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: var(--Gray-4, #bdbdbd);
+        font-family: Roboto;
+        font-size: 24px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 100% */
+      }
+    }
+  }
+
+  .list-with-transition {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out; // Add a transition for smooth sliding
+
+    li {
+      background: var(--1, #fbfbfb);
+      width: 100%;
+      margin: 5vh 0;
+      display: flex;
+      flex-direction: row;
+      img {
+        object-fit: cover;
+        min-width: 65%;
+        height: 400px !important;
+        height: auto;
+      }
+      .description {
+        text-align: left;
+        padding: 3vh 0;
+        padding-left: 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+          @include h2;
+        }
+
+        h2,
+        p,
+        button {
+          margin: 0;
+        }
+        button {
+          min-width: 180px;
+          max-width: 350px;
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 850px) {
+  li {
+    flex-direction: column !important;
+  }
+  .description {
+    text-align: center !important;
+    padding: 3vh 6vw !important;
+    p {
+      margin: 3vh 0 !important;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+}

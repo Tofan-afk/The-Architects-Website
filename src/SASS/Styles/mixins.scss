@@ -1,0 +1,126 @@
+@mixin vertical-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin h1_span {
+  margin: 0;
+  text-align: left;
+  font-size: 5rem;
+
+  span {
+    display: block;
+    margin-left: 20px;
+    width: min-content;
+    line-height: 5.3rem; /* 100% */
+    &:nth-child(1) {
+      color: var(--Gray-4, #bdbdbd);
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+    }
+    &:nth-child(2) {
+      color: var(--Gray-1, #333);
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+}
+
+@mixin h1_span_inverted {
+  margin: 0;
+  text-align: left;
+  font-size: 5rem;
+
+  span {
+    display: block;
+    margin-left: 20px;
+    width: min-content;
+    line-height: 64px; /* 100% */
+    &:nth-child(2) {
+      color: var(--Gray-4, #bdbdbd);
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+    }
+    &:nth-child(1) {
+      color: var(--Gray-1, #333);
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+}
+
+@mixin h2 {
+  color: var(--Gray-4, #bdbdbd);
+  font-family: Roboto;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 64px; /* 100% */
+  width: 100%;
+  height: fit-content;
+  text-align: left;
+  padding-left: 10px;
+}
+
+@mixin p {
+  color: #000;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 156.25% */
+}
+
+@mixin base-font {
+  font-family: Roboto;
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  /* 100% */
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+@mixin button {
+  border: 1px solid #f2f2f2;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+@mixin footer {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.42px;
+}
+
+@mixin footer_list {
+  height: 80%;
+  text-align: left;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  li {
+    @include footer;
+
+    &:nth-child(1) {
+      font-size: 22px;
+    }
+  }
+}
