@@ -7,7 +7,6 @@ import Gallery from "./Gallery";
 import Certifications from "./Certifications";
 import Contacts from "./Contacts";
 import Projects from "./Projects";
-
 import NoPage from "./NoPage";
 
 export default function App() {
@@ -15,7 +14,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Header />}>
+          <Route path="/The-Architects-Website/" element={<Header />}>
             <Route index element={<Home />} />
             <Route path="gallery" element={<Gallery />} />
             <Route path="projects" element={<Projects />} />

@@ -28,7 +28,7 @@ function Data() {
         </h1>
       </div>
       <div className="maps">
-        <img src="/maps.jpg" />
+        <img src="./maps.jpg" />
       </div>
     </div>
   );

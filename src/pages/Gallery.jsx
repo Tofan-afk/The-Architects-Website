@@ -9,7 +9,7 @@ export default function Gallery() {
 }
 
 const images = [
-  "/build_1.jpg",
+  "./build_1.jpg",
   "https://source.unsplash.com/Dm-qxdynoEc/800x799",
   "https://source.unsplash.com/qDkso9nvCg0/600x799",
   "https://source.unsplash.com/iecJiKe_RNg/600x799",

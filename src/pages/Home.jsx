@@ -13,9 +13,9 @@ export default function Home() {
   );
   function Present() {
     const images = [
-      { image: "/build_1.jpg", overlay: "something" },
-      { image: "/build_2.jpg", overlay: "skkraa" },
-      { image: "/place.jpg", overlay: "skya" },
+      { src: "./build_1.jpg", overlay: "something" },
+      { src: "./build_2.jpg", overlay: "skkraa" },
+      { src: "./place.jpg", overlay: "skya" },
     ];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -121,7 +121,7 @@ export default function Home() {
               {images.map((image, index) => (
                 <div key={index} className="image-wrapper">
                   <img
-                    src={image.image}
+                    src={image.src}
                     alt={`Project Image ${index + 1}`}
                     className="carousel-image"
                   />
@@ -143,9 +143,9 @@ export default function Home() {
       <div className="about">
         <div className="about_content">
           <div id="about_images">
-            <img src="/place.jpg" alt="placeholder" />
-            <img src="/place.jpg" alt="placeholder" />
-            <img src="/place.jpg" alt="placeholder" />
+            <img src="./place.jpg" alt="placeholder" />
+            <img src="./place.jpg" alt="placeholder" />
+            <img src="./place.jpg" alt="placeholder" />
           </div>
           <div id="about_text">
             <h2>About</h2>
@@ -220,11 +220,11 @@ export default function Home() {
         <div className="projects_content">
           <h2>Our Projects</h2>
           <div className="project_gallery">
-            <img src="/place.jpg" alt="placeholder" />
-            <img src="/place.jpg" alt="placeholder" />
-            <img src="/place.jpg" alt="placeholder" />
-            <img src="/place.jpg" alt="placeholder" />
-            <img src="/place.jpg" alt="placeholder" />
+            <img src="./place.jpg" alt="placeholder" />
+            <img src="./place.jpg" alt="placeholder" />
+            <img src="./place.jpg" alt="placeholder" />
+            <img src="./place.jpg" alt="placeholder" />
+            <img src="./place.jpg" alt="placeholder" />
           </div>
           <button>All Projects</button>
         </div>
@@ -245,7 +245,7 @@ export default function Home() {
               <input type="text" placeholder="Interested in..." />
               <textarea placeholder="Message"></textarea>
             </form>
-            <img src="/place.jpg" alt="placeholder" />
+            <img src="./place.jpg" alt="placeholder" />
           </div>
         </div>
       </div>
