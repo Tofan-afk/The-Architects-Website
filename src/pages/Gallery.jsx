@@ -1,19 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
-import anime from "animejs/lib/anime.es.js";
+import React, { useRef, useEffect } from "react";
 import "../SASS/gallery.scss";
-import { Header, Footer } from "../basic/Basic";
 
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import autoAnimate from "@formkit/auto-animate";
 
-export default function App() {
-  return (
-    <>
-      <Header />
-      <PhotoGallery />
-      <Footer />
-    </>
-  );
+export default function Gallery() {
+  return <PhotoGallery />;
 }
 
 const images = [

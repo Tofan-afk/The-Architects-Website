@@ -1,16 +1,8 @@
-import React, { useRef, useState, useEffect } from "react";
-import anime from "animejs/lib/anime.es.js";
+import React from "react";
 import "../SASS/contacts.scss";
-import { Header, Footer } from "../basic/Basic";
 
-export default function App() {
-  return (
-    <>
-      <Header />
-      <Data />
-      <Footer />
-    </>
-  );
+export default function Contacts() {
+  return <Data />;
 }
 
 function Data() {
